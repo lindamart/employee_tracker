@@ -1,0 +1,33 @@
+{
+  "name": "employee_tracker",
+  "version": "1.0.0",
+  "description": "Overview:",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "console.table": "^0.10.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "figlet": "^1.5.2",
+    "inquirer": "^8.2.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node your-script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lindamart/employee_tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lindamart/employee_tracker/issues"
+  },
+  "homepage": "https://github.com/lindamart/employee_tracker#readme"
+}
