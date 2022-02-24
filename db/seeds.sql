@@ -1,8 +1,36 @@
-INSERT INTO department(department_name)
-VALUES("Engineering"), ("Sales"), ("Finance"), ("Legal"), ("Marketing");
+use employeeTracker_db
 
-INSERT INTO role(title, salary, department_id)
-VALUES("Engineer", 85000, 1), ("Senior Engineer", 125000, 1), ("CFO", 350000, 3), ("Chief Counsel", 300000, 4);
+INSERT INTO department (name)
+VALUES
+('Engineering'),
+('Finance'),
+('Legal'),
+('IMT'),
+('Human Resources');
 
-INSERT INTO employee(first_name, last_name, role_id, manager_id)
-VALUES ('Joe', 'Shmoe', 1, 2), ('Sally', 'Smith', 1, null), ('Jose', 'Martinez', 1, 2), ('Ariana', 'Lugo', 2, 2), ('Gabriel', 'Gonzalez', 4, null);
+SELECT * FROM department;
+
+INSERT INTO roles (title, salary, department_id)
+  VALUES 
+  ('CEO', 1000000, 12),
+  ('Director of HR', 300000, 12),
+  ('Director of IMT', 200000, 12),
+  ('HR Manager', 300000, 7234),
+  ('Engineering Manager', 300000, 8234),
+  ('Engineering Assistant', 150000, 8234);
+
+  SELECT * FROM roles;
+
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+  VALUES
+  ('Garcia', 'Jennifer', 1,1),  
+  ('Melendez', 'Edward', 2,1),
+  ('Jones', 'Alex', 3,1),
+  ('Martinez', 'Sylvia',4,1),
+  ('Velez', 'Joel', 5, 2),
+  ('Phillips' , 'Tony', 6,2),
+  ('Pullum', 'Pete', 7,2),
+  ('Rivera', 'Lynnette', 8,2),
+ 
+
+SELECT * FROM employee;
