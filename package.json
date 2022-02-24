@@ -1,33 +1,19 @@
 {
-  "name": "employeetracker",
+  "name": "main",
   "version": "1.0.0",
-  "description": "my SQL server",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "seed": "node server.js"
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Esilfa/employee-tracker.git"
-  },
-  "author": "Estefany Silfa",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Esilfa/employee-tracker/issues"
-  },
-  "homepage": "https://github.com/Esilfa/employee-tracker#readme",
+  "description": "",
   "dependencies": {
-    "asciiart-logo": "^0.2.6",
     "console.table": "^0.10.0",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3",
     "inquirer": "^8.2.0",
     "mysql2": "^2.3.3",
-    "sql-formatter": "^4.0.2"
-  },
-  "devDependencies": {
-    "mysql-db-seed": "0.0.4"
+    "jshint": "^2.12.0"
   }
 }
