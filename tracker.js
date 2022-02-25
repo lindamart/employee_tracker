@@ -19,13 +19,13 @@ function menu() {
                 message: "What would you like to do?",
                 name: "choice",
                 choices: [
-                    "View All Employees",
-                    "Add an Employee",
-                    "Update an Employee Role",
-                    "View All Roles",
-                    "Add a Role",
                     "View All Departments",
                     "Add a Department",
+                    "View All Employees",
+                    "Add an Employee",
+                    "View All Roles",
+                    "Add a Role",
+                    "Update an Employee Role",
                     "Quit",
                 ]
             }])
