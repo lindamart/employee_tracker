@@ -12,6 +12,7 @@ const db = mysql.createConnection(
     },
 );
 
+// Menu prompt and choice response
 function menu() {
     inquirer.prompt([
             {
@@ -48,6 +49,7 @@ function menu() {
         })
 };
 
+// All Dept
 function getAllDepartments() {
     db.query("SELECT * FROM department", (err, results) => {
         if (err) {
@@ -58,6 +60,8 @@ function getAllDepartments() {
         }
     })
 }
+
+// All Roles
 function getAllRoles() {
     db.query("SELECT * FROM roles", (err, results) => {
         if (err) {
@@ -68,6 +72,8 @@ function getAllRoles() {
         }
     })
 }
+
+// All Employees
 function getAllEmployees() {
     db.query("SELECT * FROM employee", (err, results) => {
         if (err) {
@@ -78,6 +84,8 @@ function getAllEmployees() {
         }
     })
 }
+
+// Add Dept
 function addDepartment() {
 
     inquirer.prompt([
@@ -100,6 +108,8 @@ function addDepartment() {
             });
     });
 };
+
+// Add Role
 function addRole() {
     db.query("SELECT * FROM department",
         function (err, res) {
@@ -141,8 +151,7 @@ function addRole() {
         });
 };
 
-// Add Employee //
-// Title
+// Add Employee
 const roleArr = [];
 function selectRole() {
     db.query("SELECT * FROM roles", function (err, res) {
@@ -154,7 +163,7 @@ function selectRole() {
     })
     return roleArr;
 }
-// Manager
+
 const managersArr = [];
 function selectManager() {
     db.query("SELECT first_name, last_name FROM employee WHERE manager_id IS NULL", function (err, res) {
@@ -205,7 +214,7 @@ function addEmployee() {
     })
 }
 
-// Employee
+// Update Employee
 function updateEmployeeRole() {
     db.query("SELECT employee.last_name, roles.title FROM employee JOIN roles ON employee.role_id = roles.id;", function (err, res) {
         if (err) throw err
@@ -249,4 +258,5 @@ function updateEmployeeRole() {
         });
     });
 }
+// Call Menu
 menu();

@@ -1,5 +1,6 @@
 use employeeTracker_db;
 
+-- Dept 
 INSERT INTO department (name)
 VALUES
 ('Engineering'),
@@ -10,6 +11,7 @@ VALUES
 
 SELECT * FROM department;
 
+--Roles
 INSERT INTO roles (title, salary, department_id)
   VALUES 
   ('CEO', 1000000, 12),
@@ -21,6 +23,7 @@ INSERT INTO roles (title, salary, department_id)
 
   SELECT * FROM roles;
 
+--Employee
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
   VALUES
   ('Garcia', 'Jennifer', 1,1),  
