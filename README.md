@@ -51,7 +51,7 @@ Use the ```up and down arrow keys``` to navigate the menu in order to view, crea
 [Back to Table of Contents](#table-of-contents)
 # Preview
 
-### MySQL Workbench - Database Schema 
+### MySQL Workbench
 ![](assets/dbSchema.jpg)
 
 ### Application Invoked and Main Menu Presented
