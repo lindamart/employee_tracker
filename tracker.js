@@ -7,14 +7,13 @@ const db = mysql.createConnection(
     {
         host: 'localhost',
         user: 'root',
-        password: 'rootpass',
+        password: 'root',
         database: 'employeeTracker_db'
     },
 );
 
 function menu() {
-    inquirer
-        .prompt([
+    inquirer.prompt([
             {
                 type: "list",
                 message: "What would you like to do?",
@@ -186,13 +185,13 @@ function addEmployee() {
             type: "list",
             message: "What is their role? ",
             choices: selectRole()
-        },
-        {
-            name: "manager",
-            type: "list",
-            message: "What is their manager's name?",
-            choices: selectManager()
         }
+        // {
+        //     name: "manager",
+        //     type: "list",
+        //     message: "What is their manager's name?",
+        //     choices: selectManager()
+        // }
     ]).then(function (answers) {
         const roleId = selectRole().indexOf(answers.role) + 1
         const managerId = selectManager().indexOf(answers.manager) + 1
