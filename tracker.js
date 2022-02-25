@@ -20,12 +20,11 @@ function menu() {
                 name: "choice",
                 choices: [
                     "View All Departments",
-                    "Add a Department",
-                    "View All Employees",
-                    "Add an Employee",
                     "View All Roles",
+                    "View All Employees",
+                    "Add a Department",
+                    "Add an Employee",
                     "Add a Role",
-                    "Update an Employee Role",
                     "Quit",
                 ]
             }])
@@ -186,12 +185,7 @@ function addEmployee() {
             message: "What is their role? ",
             choices: selectRole()
         }
-        // {
-        //     name: "manager",
-        //     type: "list",
-        //     message: "What is their manager's name?",
-        //     choices: selectManager()
-        // }
+
     ]).then(function (answers) {
         const roleId = selectRole().indexOf(answers.role) + 1
         const managerId = selectManager().indexOf(answers.manager) + 1
